@@ -16,15 +16,16 @@ const signInSuccess = function(response) {
     $('.auth-form').hide()
     $('#auth-message').hide()
     $('.database-sidebar').show()
-    $('#welcome-message').show()
+    $('#body-message').text(`Hey ${store.user.username} - you're an all-star`)
 }
 
 const signInFailure = function() {
-    $('#auth-message').text('Wrong something.')
+    $('#auth-message').text('Ruh-roh - something went wrong')
 }
 
-const changePasswordSuccess = function() {
-    $('#auth-message').text('Changed!')
+const changePasswordSuccess = function() { 
+    $('#body-message').text('Really? That\'s your new password? Okay')
+    $('#change-password-form').hide()
     $('form').trigger('reset')
 }
 
@@ -33,11 +34,18 @@ const changePasswordFailure = function() {
     // $('form').trigger('reset')
 }
 
+const signOutSuccess = function() {
+    $('.database-sidebar').hide()
+    $('#body-message').hide()
+    $('.landing-page').show()
+}
+
 module.exports = {
     signUpSuccess,
     signUpFailure,
     signInSuccess,
     signInFailure,
     changePasswordSuccess,
-    changePasswordFailure
+    changePasswordFailure,
+    signOutSuccess,
 }

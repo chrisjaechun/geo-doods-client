@@ -6,6 +6,7 @@ const getStarted = function () {
     $('.landing-page').hide()
     $('.auth-form').show()
     $('#auth-message').show()
+    $('#auth-message').text('Sign-In or Sign-Up to join!')
   }
 
 const onSignUp = function (event) {
@@ -30,7 +31,7 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
   }
 
-const onSignOut = function (event) {
+const onSignOut = function () {
     api.signOut()
       .then(ui.signOutSuccess)
       .catch(next)
@@ -45,10 +46,15 @@ const onChangePassword = function (event) {
       .then(ui.changePasswordSuccess)
       .catch(ui.changePasswordFailure)
 }
+
+const onChangePasswordSidebar = function () {
+    $('#change-password-form').show()
+}
 module.exports = {
     getStarted,
     onSignUp,
     onSignIn,
     onSignOut,
-    onChangePassword
+    onChangePassword,
+    onChangePasswordSidebar
 }

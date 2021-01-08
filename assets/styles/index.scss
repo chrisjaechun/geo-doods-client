@@ -4,6 +4,8 @@ html, body {
     background-color: #042A2B;
 }
 
+// landing page
+
 .landing-logo {
     color: #FFFFFF;
     font-family: 'Dosis', sans-serif;
@@ -38,6 +40,8 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
+// authorization page
+
 #sign-in-button, #sign-up-button {
     background-color: #EF7B45;
     border: solid #000000;
@@ -49,7 +53,7 @@ html, body {
 
 .auth-form {
     display: flex;
-    font-family: 'Open Sans Condensed', sans-serif;
+    // font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -83,7 +87,46 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#welcome-message {
+// Sidebar
+
+#sidebar-logo {
+    color: #FFFFFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2.5vw;
+    text-shadow: 3.5px 3.5px #000000;
+    padding-bottom: 25px;
+    border-bottom: solid #ffffff
+}
+
+.database-sidebar {
+    min-width: 230px;
+    max-width: 230px;
+    // min-height: 100vh;
+    margin-top: 1%;
+    margin-left: 1%
+}
+
+.sidebar-options {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 35px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a:hover {
+    color: #EF7B45;
+    // text-shadow: 2px 2px #FFFFFF;
+}
+
+#venueSubmenu {
+    font-size: 25px;
+}
+
+// body and forms
+
+#body-message {
     color: #ffffff;
     text-shadow: 3px 3px #000000;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -98,28 +141,23 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#sidebar-logo {
+#change-password-form {
+    display: flex;
+    // font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#change-password-button {
+    background-color: #EF7B45;
+    border: solid #000000;
     color: #FFFFFF;
-    font-family: 'Dosis', sans-serif;
-    font-size: 2.5vw;
-    text-shadow: 3.5px 3.5px #000000;
-}
-
-// .wrapper {
-//     display: flex;
-//     align-items: stretch;
-// }
-
-.database-sidebar {
-    min-width: 500px;
-    max-width: 500px;
-    min-height: 100vh;
-    margin-top: 1%;
-    margin-left: 1%
-}
-
-.sidebar-options {
-    color: #ffffff;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px
 }

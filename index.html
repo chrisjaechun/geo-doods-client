@@ -25,11 +25,11 @@
       <div class="landing-page">
         <h1 class="landing-logo">GEO-DOODS</h1>
         <div class="landing-message">
-          <p>Find connections through your attended events!</p>
+          <p>The chronic-cle of your adventures or whatever!</p>
         </div>
         <button type="button" class="btn btn-lg get-started-btn">Get Started</button>
       </div>
-      <p id="welcome-message">Welcome, dood!</p>
+      <p id="body-message"></p>
       <p id="auth-message">Sign-In or Sign-Up to join!</p>
       <div class="auth-form">
         <div id="sign-in-form">
@@ -66,20 +66,19 @@
           <button type="submit" class="btn-lg" id="sign-up-button">Sign-Up</button>
         </form>
         </div>
-          <!-- <button type="button" Class="btn-lg" id="sign-out-button">Sign Out</button> -->
-          <!-- <div id="change-password-form">
-            <form>
-              <div class="form-group2">
-                <label for="currentPasswordInput">Current password</label>
-                <input type="password" class="form-control" id="currentPasswordInput" placeholder="Current password" name="passwords[old]">
-              </div>
-              <div class="form-group2">
-                <label for="newPasswordInput">New password</label>
-                <input type="password" class="form-control" id="newPasswordInput" placeholder="New password" name="passwords[new]">
-              </div>
-              <button type="submit" class="btn-lg" id="change-password-button">Change Password</button>
-            </form>
-          </div> -->
+      </div>
+      <div id="change-password-form">
+        <form>
+          <div class="form-group2">
+            <label for="currentPasswordInput">Current password</label>
+            <input type="password" class="form-control" id="currentPasswordInput" placeholder="Current password" name="passwords[old]">
+          </div>
+          <div class="form-group2">
+            <label for="newPasswordInput">New password</label>
+            <input type="password" class="form-control" id="newPasswordInput" placeholder="New password" name="passwords[new]">
+          </div>
+          <button type="submit" class="btn-lg" id="change-password-button">Change Password</button>
+        </form>
       </div>
       <div class="database-sidebar">
         <div class="wrapper">
@@ -90,7 +89,7 @@
               </div>
               <div class="sidebar-options">
               <ul class="list-unstyled components">
-                  <li class="active">
+                  <li class="active sidebar-actions">
                       <a href="#venueSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Venues</a>
                       <ul class="collapse list-unstyled" id="venueSubmenu">
                           <li>
@@ -110,28 +109,11 @@
                           </li>                          
                       </ul>
                   </li>
-                  <li>
-                      <a href="#">About</a>
+                  <li id="change-password">
+                      <a href="#">Change Password</a>
                   </li>
-                  <li>
-                      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                      <ul class="collapse list-unstyled" id="pageSubmenu">
-                          <li>
-                              <a href="#">Page 1</a>
-                          </li>
-                          <li>
-                              <a href="#">Page 2</a>
-                          </li>
-                          <li>
-                              <a href="#">Page 3</a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#">Portfolio</a>
-                  </li>
-                  <li>
-                      <a href="#">Contact</a>
+                  <li id="sign-out">
+                      <a href="#">Sign-Out</a>
                   </li>
               </ul>
             </div>

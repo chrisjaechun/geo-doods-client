@@ -14,14 +14,16 @@ $(() => {
   // hide auth-form
   $('.auth-form').hide()
   $('#auth-message').hide()
-  // hide dashboard
+  // hide sidebar and forms
   $('.database-sidebar').hide()
-  $('#welcome-message').hide()
+  $('#change-password-form').hide()
+  // show change-password-form from sidebar
+  $('#change-password').on('click', authEvents.onChangePasswordSidebar)
   // show auth-form on 'Get Started' click
   $('.get-started-btn').on('click', authEvents.getStarted)
   // Authorization event listeners
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#sign-out-button').on('click', authEvents.onSignOut)
+  $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
 })
