@@ -19,6 +19,17 @@ const signIn = function (data) {
     })
   }
   
+// API call for sign-out
+const signOut = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    data: data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+ }
 // API call for change-password
 const changePassword = function (data) {
     return $.ajax({
@@ -30,23 +41,12 @@ const changePassword = function (data) {
       }
     })
   }
-  
-  // API call for sign-out
-  const signOut = function (data) {
-    return $.ajax({
-      url: config.apiUrl + '/sign-out',
-      method: 'DELETE',
-      data: data,
-      headers: {
-        Authorization: 'Bearer ' + store.user.token
-      }
-    })
-  }
+
   
   module.exports = {
     signUp,
     signIn,
-    changePassword,
-    signOut
+    signOut,
+    changePassword
   }
   

@@ -23,11 +23,121 @@
     </head>
     <body>
       <div class="landing-page">
-      <h1 class="landing-logo">GEO-DOODS</h1>
-      <div class="welcome-message">
-        <p>Find connections through your attended events!</p>
+        <h1 class="landing-logo">GEO-DOODS</h1>
+        <div class="landing-message">
+          <p>Find connections through your attended events!</p>
+        </div>
+        <button type="button" class="btn btn-lg get-started-btn">Get Started</button>
       </div>
-      <button type="button" class="btn btn-primary btn-lg">Get Started</button>
+      <p id="welcome-message">Welcome, dood!</p>
+      <p id="auth-message">Sign-In or Sign-Up to join!</p>
+      <div class="auth-form">
+        <div id="sign-in-form">
+        <form>
+          <div class="form-group2">
+            <label for="emailInput2">Email address</label>
+            <input type="email" class="form-control" id="emailInput2" placeholder="Enter email" name="credentials[email]">
+          </div>
+          <div class="form-group2">
+            <label for="passwordInput2">Password</label>
+            <input type="password" class="form-control" id="passwordInput2" placeholder="Password" name="credentials[password]">
+          </div>
+          <button type="submit" class="btn-lg" id="sign-in-button">Sign-In</button>
+        </form>
+        </div>
+        <div id="sign-up-form">
+        <form>
+          <div class="form-group1">
+            <label for="usernameInput">Username</label>
+            <input type="text" class="form-control" id="userInput" placeholder="Username" name="credentials[username]">
+          </div>
+          <div class="form-group1">
+            <label for="emailInput">Email address</label>
+            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+          </div>
+          <div class="form-group1">
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="credentials[password]">
+          </div>
+          <div class="form-group1">
+            <label for="passwordConfirmationInput">Password</label>
+            <input type="password" class="form-control" id="passwordConfirmationInput" placeholder="Password confirmation" name="credentials[password_confirmation]">
+          </div>
+          <button type="submit" class="btn-lg" id="sign-up-button">Sign-Up</button>
+        </form>
+        </div>
+          <!-- <button type="button" Class="btn-lg" id="sign-out-button">Sign Out</button> -->
+          <!-- <div id="change-password-form">
+            <form>
+              <div class="form-group2">
+                <label for="currentPasswordInput">Current password</label>
+                <input type="password" class="form-control" id="currentPasswordInput" placeholder="Current password" name="passwords[old]">
+              </div>
+              <div class="form-group2">
+                <label for="newPasswordInput">New password</label>
+                <input type="password" class="form-control" id="newPasswordInput" placeholder="New password" name="passwords[new]">
+              </div>
+              <button type="submit" class="btn-lg" id="change-password-button">Change Password</button>
+            </form>
+          </div> -->
+      </div>
+      <div class="database-sidebar">
+        <div class="wrapper">
+          <!-- Sidebar -->
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                  <h1 id="sidebar-logo">GEO-DOODS</h1>
+              </div>
+              <div class="sidebar-options">
+              <ul class="list-unstyled components">
+                  <li class="active">
+                      <a href="#venueSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Venues</a>
+                      <ul class="collapse list-unstyled" id="venueSubmenu">
+                          <li>
+                              <a href="#">Create</a>
+                          </li>
+                          <li>
+                              <a href="#">Get all</a>
+                          </li>
+                          <li>
+                              <a href="#">Get by ID</a>
+                          </li>
+                          <li>
+                              <a href="#">Update</a>
+                          </li>
+                          <li>
+                              <a href="#">Delete</a>
+                          </li>                          
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#">About</a>
+                  </li>
+                  <li>
+                      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                      <ul class="collapse list-unstyled" id="pageSubmenu">
+                          <li>
+                              <a href="#">Page 1</a>
+                          </li>
+                          <li>
+                              <a href="#">Page 2</a>
+                          </li>
+                          <li>
+                              <a href="#">Page 3</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#">Portfolio</a>
+                  </li>
+                  <li>
+                      <a href="#">Contact</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+      
+      </div>
       </div>
     </body>
 </html>
