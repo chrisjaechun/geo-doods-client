@@ -5,8 +5,6 @@ const onCreateSuccess = function (response) {
     
     const venue = response.venue
 
-    // console.log(response.venue)
-
     const venueHTML = (`
       <div>
         <h1>Name: ${venue.name}</h1>
@@ -51,12 +49,6 @@ const onShowSuccess = function (response) {
   $('#body-message').text('Here it is!')
 
   const venue = response.venue
-    
-    // console.log(venue)
-
-
-    // console.log(venue)
-    // console.log(venue.name)
 
   const venueHTML = (`
     <div>
@@ -80,24 +72,9 @@ const onDestroySuccess = function () {
   $('form').trigger('reset')
 }
 
-const onUpdateSuccess = function (response) {
+const onUpdateSuccess = function () {
   $('#body-message').text('Updated! Most excellent!')
 
-  const venue = response
-
-  console.log(venue)
-  
-  // const venueHTML = (`
-  //   <div>
-  //     <h1>Name: ${venue.name}</h1>
-  //     <p>Location: ${venue.location}</p>
-  //     <p>Event: ${venue.event}</p>
-  //     <p>ID: ${venue._id}</p>
-  //   </div>
-  // `)
-
-  // $('#venue-body').html(venueHTML)
-  // $('#venue-body').show()
   $('#update-venue-form').hide()
   $('form').trigger('reset')
 }

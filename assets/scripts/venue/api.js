@@ -23,7 +23,6 @@ const indexVenues = function () {
 }
 
 const showVenue = function (data) {
-    // console.log(data)
     return $.ajax({
         url: config.apiUrl + '/venues/' + data.venue.id,
         method: 'GET',
@@ -44,8 +43,6 @@ const destroyVenue = function (data) {
 }
 
 const updateVenue = function (data) {
-
-    // console.log(data)
     return $.ajax({
         url: config.apiUrl + '/venues/' + data.venue.id,
         method: 'PATCH',

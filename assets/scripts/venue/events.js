@@ -47,10 +47,7 @@ const onDestroyVenue = function (event) {
 
     const data = getFormFields(event.target)
 
-    // let response
-
     api.destroyVenue(data)
-    //   .then((event) => response )
       .then(ui.onDestroySuccess)
       .catch(ui.onError)
 }
