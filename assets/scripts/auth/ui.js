@@ -7,7 +7,7 @@ const signUpSuccess = function() {
 }
 
 const signUpFailure = function(error) {
-    $('#auth-message').text('Something went wrong')
+    $('#auth-message').text('Yikes! ' + error.responseJSON.message)
     $('form').trigger('reset')
     
 }
@@ -22,8 +22,8 @@ const signInSuccess = function(response) {
     $('.database-sidebar').show()
 }
 
-const signInFailure = function() {
-    $('#auth-message').text('Something went wrong')
+const signInFailure = function(error) {
+    $('#auth-message').text('Yikes! ' + error.responseJSON.message)
     $('form').trigger('reset')
 }
 
@@ -34,7 +34,7 @@ const changePasswordSuccess = function() {
 }
 
 const changePasswordFailure = function() {
-    $('#body-message').text('Something went wrong')
+    $('#body-message').text('Yikes! ' + error.responseJSON.message)
     $('form').trigger('reset')
 }
 

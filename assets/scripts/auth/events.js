@@ -5,6 +5,7 @@ const getFormFields = require('./../../../lib/get-form-fields')
 const getStarted = function () {
     $('.landing-page').hide()
     $('.auth-form').show()
+    $('#sign-up-form').show()
     $('#auth-message').show()
     $('#auth-message').text('Sign-In or Sign-Up to join!')
   }
