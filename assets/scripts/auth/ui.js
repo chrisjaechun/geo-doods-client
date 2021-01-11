@@ -7,7 +7,9 @@ const signUpSuccess = function() {
 }
 
 const signUpFailure = function(error) {
-    $('#auth-message').text('Yikes.')
+    $('#auth-message').text('Something went wrong')
+    $('form').trigger('reset')
+    
 }
 
 const signInSuccess = function(response) {
@@ -15,29 +17,38 @@ const signInSuccess = function(response) {
     store.user = response.user
     $('.auth-form').hide()
     $('#auth-message').hide()
+    $('#body-message').show()
+    $('#body-message').text(`Hey ${store.user.username} - you're a rockstar`)
     $('.database-sidebar').show()
-    $('#body-message').text(`Hey ${store.user.username} - you're an all-star`)
 }
 
 const signInFailure = function() {
-    $('#auth-message').text('Ruh-roh - something went wrong')
+    $('#auth-message').text('Something went wrong')
+    $('form').trigger('reset')
 }
 
 const changePasswordSuccess = function() { 
-    $('#body-message').text('Really? That\'s your new password? Okay')
+    $('#body-message').text('Nice new password!')
     $('#change-password-form').hide()
     $('form').trigger('reset')
 }
 
 const changePasswordFailure = function() {
-    $('#auth-message').text('Something is not right.')
-    // $('form').trigger('reset')
+    $('#body-message').text('Something went wrong')
+    $('form').trigger('reset')
 }
 
 const signOutSuccess = function() {
-    $('.database-sidebar').hide()
-    $('#body-message').hide()
+    store.user = null
     $('.landing-page').show()
+    $('.database-sidebar').hide()
+    $('.forms').hide()
+    $('#body-message').hide()
+    $('#venue-body').hide()
+}
+
+const onError = function (error) {
+    $('#body-message').text('Yikes! ' + error.responseJSON.message)
 }
 
 module.exports = {
@@ -48,4 +59,5 @@ module.exports = {
     changePasswordSuccess,
     changePasswordFailure,
     signOutSuccess,
+    onError
 }

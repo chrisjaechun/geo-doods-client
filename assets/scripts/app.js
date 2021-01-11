@@ -16,14 +16,24 @@ $(() => {
   $('#auth-message').hide()
   // hide sidebar and forms
   $('.database-sidebar').hide()
-  $('#change-password-form').hide()
-  // show change-password-form from sidebar
+  $('.forms').hide()
+  // show forms on click from sidebar
   $('#change-password').on('click', authEvents.onChangePasswordSidebar)
-  // show auth-form on 'Get Started' click
-  $('.get-started-btn').on('click', authEvents.getStarted)
+  $('#create').on('click', venueEvents.onCreateSidebar)
+  $('#show').on('click', venueEvents.onShowSidebar)
+  $('#destroy').on('click', venueEvents.onDestroySidebar)
+  $('#update').on('click', venueEvents.onUpdateSidebar)
   // Authorization event listeners
-  $('#sign-up-form').on('submit', authEvents.onSignUp)
-  $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  // Venue-resource event listeners
+  $('#create-venue-form').on('submit', venueEvents.onCreateVenue)
+  $('#index').on('click', venueEvents.onIndexVenues)
+  $('#show-venue-form').on('submit', venueEvents.onShowVenue)
+  $('#destroy-venue-form').on('submit', venueEvents.onDestroyVenue)
+  $('#update-venue-form').on('submit', venueEvents.onUpdateVenue)
+  // show auth-form on 'Get Started' click
+  $('.get-started-btn').on('click', authEvents.getStarted)
 })

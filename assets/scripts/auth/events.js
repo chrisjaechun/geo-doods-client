@@ -34,27 +34,31 @@ const onSignIn = function (event) {
 const onSignOut = function () {
     api.signOut()
       .then(ui.signOutSuccess)
-      .catch(next)
+      .catch(ui.onError)
   }
 
 const onChangePassword = function (event) {
-    event.preventDefault()
+  event.preventDefault()
 
-    const data = getFormFields(event.target)
+  const data = getFormFields(event.target)
 
-    api.changePassword(data)
-      .then(ui.changePasswordSuccess)
-      .catch(ui.changePasswordFailure)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const onChangePasswordSidebar = function () {
-    $('#change-password-form').show()
+  $('.forms').hide()
+  $('#change-password-form').show()
+  $('#body-message').text('Need a new password?')
+  $('#venue-body').hide()
 }
+
 module.exports = {
     getStarted,
     onSignUp,
     onSignIn,
     onSignOut,
     onChangePassword,
-    onChangePasswordSidebar
+    onChangePasswordSidebar,
 }

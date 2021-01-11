@@ -4,6 +4,10 @@ html, body {
     background-color: #042A2B;
 }
 
+html {
+    overflow: auto
+}
+
 // landing page
 
 .landing-logo {
@@ -53,7 +57,6 @@ html, body {
 
 .auth-form {
     display: flex;
-    // font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -112,6 +115,8 @@ html, body {
 }
 
 #sidebar ul.components {
+    color: #FFFFFF;
+    // text-shadow: 1px 1px #000000;
     padding: 20px 0;
 }
 
@@ -120,7 +125,7 @@ html, body {
     // text-shadow: 2px 2px #FFFFFF;
 }
 
-#venueSubmenu {
+#venue-toggle {
     font-size: 25px;
 }
 
@@ -141,7 +146,30 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#change-password-form {
+#venue-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    // text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    // transform: translateY(-50%);
+}
+
+.form-labels {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    font-weight: bold
+}
+
+#change-password-form, #create-venue-form, #show-venue-form, #destroy-venue-form, #update-venue-form {
     display: flex;
     // font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
@@ -153,7 +181,7 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#change-password-button {
+#change-password-button, #create-button, #show-button, #destroy-button, #update-button {
     background-color: #EF7B45;
     border: solid #000000;
     color: #FFFFFF;
