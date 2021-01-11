@@ -16645,8 +16645,6 @@ var onSignUp = function onSignUp(event) {
 
   var data = getFormFields(event.target);
 
-  console.log(data);
-
   api.signUp(data).then(ui.signUpSuccess).catch(ui.signUpFailure);
 };
 
@@ -16902,11 +16900,7 @@ var onDestroyVenue = function onDestroyVenue(event) {
 
     var data = getFormFields(event.target);
 
-    // let response
-
-    api.destroyVenue(data)
-    //   .then((event) => response )
-    .then(ui.onDestroySuccess).catch(ui.onError);
+    api.destroyVenue(data).then(ui.onDestroySuccess).catch(ui.onError);
 };
 
 var onDestroySidebar = function onDestroySidebar() {
@@ -16976,7 +16970,6 @@ var indexVenues = function indexVenues() {
 };
 
 var showVenue = function showVenue(data) {
-    // console.log(data)
     return $.ajax({
         url: config.apiUrl + '/venues/' + data.venue.id,
         method: 'GET',
@@ -16997,8 +16990,6 @@ var destroyVenue = function destroyVenue(data) {
 };
 
 var updateVenue = function updateVenue(data) {
-
-    // console.log(data)
     return $.ajax({
         url: config.apiUrl + '/venues/' + data.venue.id,
         method: 'PATCH',
@@ -17029,8 +17020,6 @@ var onCreateSuccess = function onCreateSuccess(response) {
   $('#body-message').text('Venue created! Rock on!');
 
   var venue = response.venue;
-
-  // console.log(response.venue)
 
   var venueHTML = '\n      <div>\n        <h1>Name: ' + venue.name + '</h1>\n        <p>Location: ' + venue.location + '</p>\n        <p>Event: ' + venue.event + '</p>\n        <p>ID: ' + venue._id + '</p>\n      </div>\n    ';
 
@@ -17063,12 +17052,6 @@ var onShowSuccess = function onShowSuccess(response) {
 
   var venue = response.venue;
 
-  // console.log(venue)
-
-
-  // console.log(venue)
-  // console.log(venue.name)
-
   var venueHTML = '\n    <div>\n      <h1>Name: ' + venue.name + '</h1>\n      <p>Location: ' + venue.location + '</p>\n      <p>Event: ' + venue.event + '</p>\n      <p>ID: ' + venue._id + '</p>\n    </div>\n  ';
 
   $('#venue-body').html(venueHTML);
@@ -17084,24 +17067,9 @@ var onDestroySuccess = function onDestroySuccess() {
   $('form').trigger('reset');
 };
 
-var onUpdateSuccess = function onUpdateSuccess(response) {
+var onUpdateSuccess = function onUpdateSuccess() {
   $('#body-message').text('Updated! Most excellent!');
 
-  var venue = response;
-
-  console.log(venue);
-
-  // const venueHTML = (`
-  //   <div>
-  //     <h1>Name: ${venue.name}</h1>
-  //     <p>Location: ${venue.location}</p>
-  //     <p>Event: ${venue.event}</p>
-  //     <p>ID: ${venue._id}</p>
-  //   </div>
-  // `)
-
-  // $('#venue-body').html(venueHTML)
-  // $('#venue-body').show()
   $('#update-venue-form').hide();
   $('form').trigger('reset');
 };
