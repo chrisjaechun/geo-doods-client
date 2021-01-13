@@ -33,7 +33,7 @@ const changePasswordSuccess = function() {
     $('form').trigger('reset')
 }
 
-const changePasswordFailure = function() {
+const changePasswordFailure = function(error) {
     $('#body-message').text('Yikes! ' + error.responseJSON.message)
     $('form').trigger('reset')
 }
