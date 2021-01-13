@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>GEO-DOODS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      
+      <!-- font for LOGO -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+      </style>
+      <!-- font for BODY text -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+      </style>
+
+    </head>
+    <body>
+      <!-- Landing page -->
+      <div class="landing-page">
+        <h1 class="landing-logo">GEO-DOODS</h1>
+        <div class="landing-message">
+          <p>Share with us, the (probably) epic chronicles of you!</p>
+        </div>
+        <button href="#" class="btn btn-lg get-started-btn">Get Started</button>
+      </div>
+      <p id="body-message"></p>
+      <p id="auth-message">Sign-In or Sign-Up to join!</p>
+      <div id="venue-body"></div>
+      <!-- Authorization form -->
+      <div class="auth-form forms">
+        <div id="sign-in-form">
+        <form>
+          <div class="form-group2">
+            <label for="emailInput2" class="form-labels">EMAIL ADDRESS</label>
+            <input type="email" class="form-control" id="emailInput2" placeholder="Email" name="credentials[email]" required>
+          </div>
+          <div class="form-group2">
+            <label for="passwordInput2" class="form-labels">PASSWORD</label>
+            <input type="password" class="form-control" id="passwordInput2" placeholder="Password" name="credentials[password]" required>
+          </div>
+          <button type="submit" class="btn-lg" id="sign-in-button">Sign-In</button>
+        </form>
+        </div>
+        <div id="sign-up-form">
+        <form>
+          <div class="form-group1">
+            <label for="usernameInput" class="form-labels">USERNAME</label>
+            <input type="text" class="form-control" id="userInput" placeholder="Username" name="credentials[username]" required>
+          </div>
+          <div class="form-group1">
+            <label for="emailInput" class="form-labels">EMAIL ADDRESS</label>
+            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Email" name="credentials[email]" required>
+          </div>
+          <div class="form-group1">
+            <label for="passwordInput" class="form-labels">PASSWORD</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="credentials[password]" required>
+          </div>
+          <div class="form-group1">
+            <label for="passwordConfirmationInput" class="form-labels">PASSWORD CONFIRMATION</label>
+            <input type="password" class="form-control" id="passwordConfirmationInput" placeholder="Password confirmation" name="credentials[password_confirmation]" required>
+          </div>
+          <button type="submit" class="btn-lg" id="sign-up-button">Sign-Up</button>
+        </form>
+        </div>
+      </div>
+      <!-- Change password form -->
+      <div id="change-password-form" class="forms">
+        <form>
+          <div class="form-group2">
+            <label for="currentPasswordInput" class="form-labels">CURRENT PASSWORD</label>
+            <input type="password" class="form-control" id="currentPasswordInput" placeholder="Current password" name="passwords[old]" required>
+          </div>
+          <div class="form-group2">
+            <label for="newPasswordInput" class="form-labels">NEW PASSWORD</label>
+            <input type="password" class="form-control" id="newPasswordInput" placeholder="New password" name="passwords[new]" required>
+          </div>
+          <button type="submit" class="btn-lg" id="change-password-button">Change Password</button>
+        </form>
+      </div>
+      <!-- Sidebar -->
+      <div class="database-sidebar">
+        <div class="wrapper">
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                  <h1 id="sidebar-logo">GEO-DOODS</h1>
+              </div>
+              <div class="sidebar-options">
+              <ul class="list-unstyled components">
+                  <li class="active sidebar-actions">
+                      <a href="#venue-toggle" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Venues</a>
+                      <ul class="collapse list-unstyled" id="venue-toggle">
+                          <li>
+                              <a href="#" id="create">Create</a>
+                          </li>
+                          <li>
+                              <a href="#" id="index">Get all</a>
+                          </li>
+                          <li>
+                              <a href="#" id="show">Get by ID</a>
+                          </li>
+                          <li>
+                              <a href="#" id="update">Update</a>
+                          </li>
+                          <li>
+                              <a href="#" id="destroy">Delete</a>
+                          </li>                          
+                      </ul>
+                  </li>
+                  <li id="change-password">
+                      <a href="#">Change Password</a>
+                  </li>
+                  <li id="sign-out">
+                      <a href="#">Sign-Out</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+      </div>
+      <!-- Venue forms -->
+      <!-- Create venue form -->
+      <div id="create-venue-form" class="forms">
+        <form>
+          <div class="create-group">
+            <label for="nameInput" class="form-labels">VENUE NAME</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Name" name="venue[name]" required>
+          </div>
+          <div class="create-group">
+            <label for="locationInput" class="form-labels">LOCATION</label>
+            <input type="text" class="form-control" id="locationInput" placeholder="Location" name="venue[location]" required>
+          </div>
+          <div class="create-group">
+            <label for="eventInput" class="form-labels">EVENT</label>
+            <input type="text" class="form-control" id="eventInput" placeholder="Event" name="venue[event]" required>
+          </div>
+          <button type="submit" class="btn-lg" id="create-button">Create Venue</button>
+        </form>
+        </div>
+        <div id="show-venue-form" class="forms">
+          <form>
+            <div class="show-group">
+              <label for="showInput" class="form-labels">VENUE ID</label>
+              <input type="text" class="form-control" id="showInput" placeholder="Venue ID" name="venue[id]" required>
+            </div>
+            <button type="submit" class="btn-lg" id="show-button">Show Venue</button>
+          </form>
+        </div>
+        <div id="destroy-venue-form" class="forms">
+          <form>
+            <div class="destroy-group">
+              <label for="destroyInput" class="form-labels">VENUE ID</label>
+              <input type="text" class="form-control" id="destroyInput" placeholder="Venue ID" name="venue[id]" required>
+            </div>
+            <button type="submit" class="btn-lg" id="destroy-button">Delete Venue</button>
+          </form>
+        </div>
+        <div id="update-venue-form" class="forms">
+          <form>
+            <div class="update-group">
+              <label for="updateInput" class="form-labels">VENUE ID</label>
+              <input type="text" class="form-control" id="updateInput" placeholder="Venue ID" name="venue[id]" required>
+            </div>
+            <div class="update-group">
+              <label for="updateNameInput" class="form-labels">VENUE NAME</label>
+              <input type="text" class="form-control" id="updateNameInput" placeholder="Name" name="venue[name]" required>
+            </div>
+            <div class="update-group">
+              <label for="updateLocationInput" class="form-labels">LOCATION</label>
+              <input type="text" class="form-control" id="updateLocationInput" placeholder="Location" name="venue[location]" required>
+            </div>
+            <div class="update-group">
+              <label for="updateEventInput" class="form-labels">EVENT</label>
+              <input type="text" class="form-control" id="updateEventInput" placeholder="Event" name="venue[event]" required>
+            </div>
+            <button type="submit" class="btn-lg" id="update-button">Update Venue</button>
+          </form>
+        </div>        
+    </body>
+</html>
