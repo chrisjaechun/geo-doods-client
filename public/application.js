@@ -16786,7 +16786,7 @@ var changePasswordSuccess = function changePasswordSuccess() {
     $('form').trigger('reset');
 };
 
-var changePasswordFailure = function changePasswordFailure() {
+var changePasswordFailure = function changePasswordFailure(error) {
     $('#body-message').text('Yikes! ' + error.responseJSON.message);
     $('form').trigger('reset');
 };
