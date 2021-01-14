@@ -1,3 +1,13 @@
+# GEO-DOODS Client
+
+GEO-DOODS (not about Pokemon), is a full-stack app that allows users to share which venues they've been to and for which event. A user must be signed-up first to be able to sign-in, upon sign-in they'll be able to access the sidebar which will allow them to create/submit venues, view all their venues, grab a single venue (by its Mongoose-generated ID), update a venue and delete a venue for the events that they've been to!
+
+### Relevant links
+
+- [Deployed Client](https://chrisjaechun.github.io/geo-doods-client/)
+- [Deployed API](https://mysterious-wave-10863.herokuapp.com/)
+- [GEO-DOODS API Repository](https://github.com/chrisjaechun/geo-doods-api)
+
 ### List of technologies Used
 
 - Git Bash
@@ -15,7 +25,7 @@
 
 ### Wireframe
 
-![Venue Database Wireframe](https://i.imgur.com/mE5MjY4.png)
+![Venue Database Wireframe](https://i.imgur.com/Pbi1bcD.png)
 
 ### Planning
 
@@ -44,3 +54,7 @@ Dedicated most of my day towards making sure my Venue resource CRUD actions work
 1/11
 
 After completing the functionality of this database, I made some minor tweaks to make it look as pretty as I could.
+
+### Unfinished
+
+At a certain point, I would like users to be able to provide reviews for the venues they've been to.
